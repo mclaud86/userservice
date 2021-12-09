@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Test User1",
+        "email": "test1@test.com",
+        "password": "Rfdfewwr34235dW",
+        "country": "Ukraine",
+        "city": "Kiev"
+    },
+
+    {
+        "name": "Test User2",
+        "email": "test2@test.com",
+        "password": "Rfdfewwr34235dW",
+        "country": "Ukraine",
+        "city": "Lviv"
+    },
+
+    {
+        "name": "Test User3",
+        "email": "test3@test.com",
+        "password": "Rfdfewwr34235dW",
+        "country": "Ukraine",
+        "city": "Dnipro"
+    },
+
+    {
+        "name": "Test User4",
+        "email": "test4@test.com",
+        "password": "Rfdfewwr34235dW",
+        "country": "Ukraine",
+        "city": "Chop"
+    },
+
+    {
+        "name": "Test User5",
+        "email": "test5@test.com",
+        "password": "Rfdfewwr34235dW",
+        "country": "Ukraine",
+        "city": "Kiev"
+    }
+
+]

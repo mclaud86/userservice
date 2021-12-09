@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "attach",
+        "name": "Attach by Process ID",
+        "processId": "${command:PickProcess}",
+        "skipFiles": ["<node_internals>/**"]
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Start Orchestrator",
+        "skipFiles": ["<node_internals>/**"],
+        "runtimeExecutable": "fastify",
+        "runtimeArgs": ["start", "-p", "3001", "-l", "info"],
+        "program": "${workspaceFolder}/orchestrator/app.js", 
+        "console": "integratedTerminal"
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Start Cache",
+        "skipFiles": ["<node_internals>/**"],
+        "runtimeExecutable": "nodemon",
+        "program": "${workspaceFolder}/cacheservice/app.js", 
+        "restart": true,
+        "console": "integratedTerminal"
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Start UserService",
+        "skipFiles": ["<node_internals>/**"],
+        "runtimeExecutable": "nodemon",
+        "program": "${workspaceFolder}/userservice/app.js", 
+        "restart": true,
+        "console": "integratedTerminal"
+      }
+    ]
+  }

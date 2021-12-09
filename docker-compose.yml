@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - 5673:5672
+      - 15673:15672
+    volumes:
+      - ./rabbitmq/data:/var/lib/rabbitmq/
+      - ./rabbitmq/log:/var/log/rabbitmq
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb/data:/data/db

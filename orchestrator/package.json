@@ -1,0 +1,30 @@
+{
+  "name": "userservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "fastify start -w --port 3001 app.js "
+  },
+  "author": "Evgeniy Molochnyuk",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "commonamq": "file:../lib/commonamq",
+    "fastify": "^3.24.0",
+    "fastify-env": "^2.1.1",
+    "fastify-error": "^0.3.1",
+    "fastify-mongoose": "^0.3.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-swagger": "^4.12.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.0"
+  }
+}
